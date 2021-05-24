@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PXam4.Pages.VoirLivre">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lvLivres">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal" HeightRequest="200">
+                                    <Label x:Name="lblTitreLivre" VerticalOptions="Center" HorizontalOptions="Center"
+                                               WidthRequest="80" FontSize="20"
+                                               Text="{Binding Titre}"></Label>
+                                    <Label x:Name="lblAuteurLivre" WidthRequest="200" VerticalOptions="Center" FontSize="20"
+                                               Text="{Binding Auteur}"></Label>
+                                    <Image x:Name="lblImageLivre" Source="{Binding Image}" WidthRequest="100" HeightRequest="80"></Image>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
